@@ -1,0 +1,93 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../img/GBO-img-hero-desktop.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero-title{
+    color: white;
+    margin-top: 240px;
+    font-size: 46px;
+}
+
+.hero-content{
+    font-size: 28px;
+    color: #e6e6e6;
+}
+
+.location-text{
+    color: #e6e6e6;
+}
+
+.hero > .container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #f8f8f8;
+}
+
+.details-hero-btn {
+    background: #f81a37;
+    color: #f8f8f8;
+    font-size: 20px;
+    padding: 12px 35px;
+    border-radius: 25px;
+    margin-top: 16px;
+    display: block;
+    margin-right: auto;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(36, 167, 193, 0.5);
+    animation: combinedEffect 2.5s infinite ease-in-out;
+}
+
+.details-hero-btn:hover,
+.details-hero-btn:focus {
+    background: #c6152c;
+    box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
+}
+
+@keyframes combinedEffect {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(36, 167, 193, 0.5);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(36, 167, 193, 0.8);
+    }
+}
+
+
+.hero-location > div{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.phones-column > div{
+    display: flex;
+    gap: 8px;
+}
+
+.hero-icon-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+}
+
+.hero-icon-container > div{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-weight: 700;
+    font-size: 18px;
+}

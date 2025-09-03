@@ -1,0 +1,14 @@
+.ustanovi-gbo{
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../img/GBO-img-7step-desktop.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.ustanovi-gbo-title{
+    text-align: center;
+    color: #f3f3f3;
+    font-size: 48px;
+}

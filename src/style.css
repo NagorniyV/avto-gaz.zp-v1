@@ -1,20 +1,10 @@
 /* Sections style */
 @import url('./css/reset.css');
-@import url('./css/brend-section.css');
 @import url('./css/container.css');
-@import url('./css/footer.css');
 @import url('./css/header.css');
-@import url('./css/hero-section.css');
-@import url('./css/services-section.css');
-@import url('./css/work-process.css');
-@import url('./css/callback-section.css');
-@import url('./css/benefits-section.css');
-@import url('./css/price-section.css');
-@import url('./css/hero-price-section.css');
-@import url('./css/hero-contacts-section.css');
-@import url('./css/contacts-body-sections.css');
-@import url('./css/service-catalog.css');
-@import url('./css/parts.css');
-@import url('./css/foto-gallery.css');
-@import url('./css/main-content-section.css');
-@import url('./css/ustanovka-gbo.css');
+@import url('./css/hero.css');
+@import url('./css/footer.css');
+@import url('./css/station.css');
+@import url('./css/gbo-calculator.css');
+@import url('./css/service-card.css');
+@import url('./css/ustanovi-gbo.css');
