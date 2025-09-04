@@ -287,22 +287,103 @@
               </p>
             </div>
             <div>
-              <!-- Иконка Ключ (3D стиль) -->
               <svg
+                width="90"
+                height="90"
+                viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                fill="none"
-                stroke="#ff2a2a"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
               >
-                <circle cx="15" cy="25" r="8" />
+                <!-- Головка ключа (круглая) -->
+                <circle
+                  cx="30"
+                  cy="40"
+                  r="18"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+                <!-- Отверстие в головке -->
+                <circle
+                  cx="30"
+                  cy="40"
+                  r="8"
+                  fill="none"
+                  stroke="#ff2a2a"
+                  stroke-width="2"
+                />
+
+                <!-- Стержень ключа -->
+                <rect
+                  x="48"
+                  y="36"
+                  width="45"
+                  height="8"
+                  fill="none"
+                  stroke="#ff2a2a"
+                  stroke-width="2"
+                />
+
+                <!-- Зубцы ключа (бороздки) -->
+                <rect
+                  x="75"
+                  y="44"
+                  width="6"
+                  height="8"
+                  fill="none"
+                  stroke="#ff2a2a"
+                  stroke-width="2"
+                />
+                <rect
+                  x="83"
+                  y="44"
+                  width="4"
+                  height="12"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+                <rect
+                  x="89"
+                  y="44"
+                  width="4"
+                  height="6"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+
+                <!-- Объёмность - тени и грани -->
+                <!-- Тень головки -->
                 <path
-                  d="M23 25 L45 25 L42 20 L38 20 L38 25 L34 25 L34 22 L30 22 L30 25 Z"
+                  d="M 30 58 A 18 18 0 0 0 48 40"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                  opacity="0.6"
+                />
+                <!-- Тень стержня -->
+                <line
+                  x1="48"
+                  y1="44"
+                  x2="93"
+                  y2="44"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                  opacity="0.6"
+                />
+
+                <!-- Дополнительные детали для объёма -->
+                <circle
+                  cx="30"
+                  cy="40"
+                  r="12"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="1"
+                  opacity="0.4"
                 />
               </svg>
+
               <p>
                 ГБО<br />
                 під ключ
@@ -382,19 +463,128 @@
               <h3>Тех. обслуговування та діагностика ГБО</h3>
               <p>від 200 грн</p>
               <svg
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                width="128"
-                height="128"
-                fill="none"
-                stroke="red"
-                stroke-width="2"
               >
-                <circle cx="32" cy="32" r="10" />
-                <path
-                  d="M32 6 v6 M32 52 v6 M6 32 h6 M52 32 h6
-           M14 14 l4 4 M46 46 l4 4 M14 50 l4 -4 M46 18 l4 -4"
+                <!-- Экран диагностического прибора -->
+                <rect
+                  x="20"
+                  y="25"
+                  width="80"
+                  height="50"
+                  rx="8"
+                  ry="8"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="4"
                 />
+
+                <!-- Экран внутри -->
+                <rect
+                  x="28"
+                  y="33"
+                  width="64"
+                  height="34"
+                  rx="4"
+                  ry="4"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+
+                <!-- Диагностические данные на экране -->
+                <line
+                  x1="35"
+                  y1="42"
+                  x2="55"
+                  y2="42"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+                <line
+                  x1="35"
+                  y1="48"
+                  x2="70"
+                  y2="48"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+                <line
+                  x1="35"
+                  y1="54"
+                  x2="60"
+                  y2="54"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+                <line
+                  x1="35"
+                  y1="60"
+                  x2="50"
+                  y2="60"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+
+                <!-- График/диаграмма -->
+                <polyline
+                  points="75,60 80,50 85,55 90,45"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+
+                <!-- Кнопки управления -->
+                <circle
+                  cx="35"
+                  cy="85"
+                  r="6"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="3"
+                />
+                <circle
+                  cx="50"
+                  cy="85"
+                  r="6"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="3"
+                />
+                <circle
+                  cx="65"
+                  cy="85"
+                  r="6"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="3"
+                />
+
+                <!-- Провод/кабель диагностики -->
+                <path
+                  d="M 85 85 Q 95 90 105 85 Q 110 80 105 75"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+                <!-- Разъём на конце провода -->
+                <rect
+                  x="102"
+                  y="72"
+                  width="8"
+                  height="6"
+                  rx="2"
+                  fill="none"
+                  stroke="#FF2A2A"
+                  stroke-width="2"
+                />
+
+                <!-- Индикатор статуса -->
+                <circle cx="90" cy="35" r="4" fill="#FF2A2A" />
               </svg>
             </div>
             <div>
@@ -524,9 +714,66 @@
           </div>
         </div>
       </section>
+
       <section class="ustanovi-gbo">
         <div class="container">
-          <h2 class="ustanovi-gbo-title">Встанови ГБО в 7 кроків</h2>
+          <h2 class="ustanovi-gbo-title">
+            Встанови ГБО в <span>7 кроків</span>
+          </h2>
+          <div class="cards-container">
+            <div class="card">
+              <h2 class="card-title">Залиш заявку або зателефонуй</h2>
+              <p class="card-description">
+                Зв'яжись з нами через сайт або зателефонуй за номером, вказаним
+                на сайті. Наш менеджер відповість на всі твої запитання.
+              </p>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Консультація та вибір обладнання</h2>
+              <p class="card-description">
+                Разом з фахівцем виберемо оптимальне обладнання для твого авто,
+                враховуючи твої потреби та бюджет.
+              </p>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Візит на СТО</h2>
+              <p class="card-description">
+                Заїжджай до нас на станцію технічного обслуговування у зручний
+                для тебе час. Попередньо краще записатись.
+              </p>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Встановлення ГБО</h2>
+              <p class="card-description">
+                Наші кваліфіковані майстри професійно встановлять газобалонне
+                обладнання на твій автомобіль.
+              </p>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Діагностика та калібрування</h2>
+              <p class="card-description">
+                Після встановлення проводимо повну діагностику системи та
+                калібруємо обладнання для оптимальної роботи.
+              </p>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Оплата послуг</h2>
+              <p class="card-description">
+                Сплачуй за послуги зручним для тебе способом - готівкою або
+                банківською карткою.
+              </p>
+            </div>
+            <div class="card last-item">
+              <h2 class="card-title">Сертифікація та гарантія</h2>
+              <p class="card-description">
+                Отримай всі необхідні документи, сертифікати та гарантію на
+                встановлене обладнання і роботи.
+              </p>
+            </div>
+          </div>
+          <button type="button" class="details-hero-btn step-btn">
+            ЗАЛИШИТИ ЗАЯВКУ
+          </button>
         </div>
       </section>
       <section class="gbo-calculator">
@@ -617,8 +864,6 @@
           </div>
         </div>
       </section>
-
-      <section class="about"><div class="container"></div></section>
     </main>
     <footer class="footer">
       <div class="container"></div>

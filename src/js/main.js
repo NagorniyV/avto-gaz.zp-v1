@@ -30,3 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Автоматичний розрахунок при завантаженні
   calculateSavings();
 });
+
+
+
+
