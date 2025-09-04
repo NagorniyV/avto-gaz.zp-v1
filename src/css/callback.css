@@ -1,0 +1,75 @@
+.callback-container{
+    display: flex;
+    align-items: center;
+}
+
+.callback-container > div:first-child{
+    width: 50%;
+}
+
+.discount-subtitle {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form{
+    display: flex;
+    gap: 40px;
+}
+
+.phone-input {
+    /* width: 100%; */
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: white;
+     border: none;                /* Убираем все границы */
+  border-bottom: 1px solid black;
+}
+
+.phone-input:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input {
+    margin-top: 3px;
+    margin-right: 10px;
+    accent-color: #e74c3c;
+}
+
+.checkbox-group label {
+    color: #7f8c8d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .discount-subtitle {
+        font-size: 16px;
+    }
+}

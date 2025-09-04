@@ -1,0 +1,149 @@
+.footer-card{
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 14px 18px;
+    max-width: 320px;
+}
+
+.footer-card > h3{
+    color: #f81a37;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.footer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(20%) brightness(95%);
+}
+
+.footer-card {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    border-left: 5px solid #e74c3c;
+}
+
+.footer-card h3 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.footer-card>p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.footer-list a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.footer-list a:hover {
+    color: #e74c3c;
+}
+
+.footer-list a[href^="tel:"] {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.footer-list a[href^="mailto:"] {
+    color: #3498db;
+}
+
+.footer-list a[href^="mailto:"]:hover {
+    color: #e74c3c;
+}
+
+.footer-list p {
+    color: #34495e;
+    line-height: 1.5;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .footer-card {
+        width: 300px;
+        right: 20px;
+        top: 20px;
+        padding: 20px;
+    }
+
+    .footer {
+        height: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-card {
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-left: none;
+        border-top: 5px solid #e74c3c;
+    }
+
+    .footer {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer iframe {
+        height: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
