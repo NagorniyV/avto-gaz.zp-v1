@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+// калькулятор
+
+document.addEventListener('DOMContentLoaded', function () {
   function calculateSavings() {
     // Отримуємо значення з полів вводу
     const fuelConsumption = parseFloat(document.getElementById('fuel-consumption').value) || 10;
@@ -31,6 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
   calculateSavings();
 });
 
-
-
+// конец калькулятора
 
