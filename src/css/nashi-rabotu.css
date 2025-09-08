@@ -1,0 +1,35 @@
+.gallery-section{
+    position: relative;
+    background-image: url(../img/backgraund.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;}
+
+.hero-nubmer{
+    font-size: 48px;
+    color: #f81a37;
+}
+
+.fotocards {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+.fotocards img {
+    flex: 1;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.fotocards img:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.gallery-groop>h3{
+    color: #f3f3f3;
+    font-size: 28px;
+}
