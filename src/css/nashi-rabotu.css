@@ -3,7 +3,8 @@
     background-image: url(../img/backgraund.png);
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 .hero-nubmer{
     font-size: 48px;
