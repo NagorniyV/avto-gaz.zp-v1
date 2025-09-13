@@ -1,0 +1,132 @@
+.price-title{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px
+}
+
+.by-price{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px
+}
+
+.top-price-content{
+    font-size: 26px;
+    text-indent: 30px;
+}
+
+.top-price-contaoner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 100%;
+}
+
+.best-price {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+}
+
+.price-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Центрируем все карточки */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-price {
+    flex: 0 0 calc(33.333% - 20px);
+    /* 3 карточки в ряду с учетом gap */
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.card-price {
+    /* flex: 1; */
+    min-width: 300px;
+background: linear-gradient(135deg, #dfd4db 0%, #e9e1e7 50%, #f3eef2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-price:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid #7c5b6d;
+}
+
+.card-price h3 {
+    color: #f81a37;
+    font-size: 32px;
+    margin: 30px auto 60px auto;
+    font-weight: 700;
+}
+
+.card-price .country {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.generation{
+    margin-bottom: 20px;
+    display: block;
+    font-size: 16px;
+}
+
+.country-list{
+    display: block;
+    margin-left: 40px;
+}
+
+.card-price .price {
+    font-size: 38px;
+    font-weight: 800;
+    color: #f81a37;
+    margin: 50px 0;
+    display: block;
+}
+
+.card-price .engine {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.price-btn{
+    margin: 0px auto;
+}
+
+.low-price-container{
+    flex-direction: column;
+}
+
+.low-country-list {
+    display: flex;
+    gap: 30px;
+}
+
+
+@media (max-width: 480px) {
+    .price-container {
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    .card-price {
+        max-width: 100%;
+    }
+}

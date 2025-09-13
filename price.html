@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={G-ВАШ_ID}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{G-ВАШ_ID}");
+    </script>
+
+    <!-- Кодировка и масштабирование -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="{ПУТЬ_К_FAVICON}" type="image/{png/ico/svg}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family={ШРИФТ_1}:ital,wght@0,100..900;1,100..900&family={ШРИФТ_2}:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <!-- Title & Meta Description -->
+    <title>{ВАШ ЗАГОЛОВОК ДО 60 СИМВОЛОВ}</title>
+    <meta name="description" content="{ВАШЕ ОПИСАНИЕ ДО 160 СИМВОЛОВ}" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{https://ВАШ-САЙТ.ua/}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{ЗАГОЛОВОК ДЛЯ СОЦСЕТЕЙ}" />
+    <meta property="og:description" content="{ОПИСАНИЕ ДЛЯ СОЦСЕТЕЙ}" />
+    <meta property="og:image" content="{ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_ДЛЯ_ПРЕВЬЮ}" />
+    <meta property="og:url" content="{https://ВАШ-САЙТ.ua/}" />
+    <meta property="og:site_name" content="{НАЗВАНИЕ_ВАШЕГО_САЙТА}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{ЗАГОЛОВОК_ДЛЯ_TWITTER}" />
+    <meta name="twitter:description" content="{ОПИСАНИЕ_ДЛЯ_TWITTER}" />
+    <meta name="twitter:image" content="{ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_ДЛЯ_TWITTER}" />
+
+    <!-- Scripts -->
+    <script src="./src/js/main.js" defer></script>
+    <!-- <script src="{ПУТЬ_К_ДОПОЛНИТЕЛЬНОМУ_JS}" defer></script> -->
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "{AutoRepair | LocalBusiness | Organization}",
+        "name": "{НАЗВАНИЕ_ВАШЕГО_БИЗНЕСА}",
+        "alternateName": "{АЛЬТЕРНАТИВНОЕ_НАЗВАНИЕ}",
+        "image": "{ССЫЛКА_НА_ЛОГОТИП}",
+        "url": "{https://ВАШ-САЙТ.ua}",
+        "description": "{ОПИСАНИЕ_БИЗНЕСА}",
+        "telephone": "{+380XXXXXXXXX}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{УЛИЦА, ДОМ}",
+          "addressLocality": "{ГОРОД}",
+          "addressRegion": "{ОБЛАСТЬ}",
+          "postalCode": "{ИНДЕКС}",
+          "addressCountry": "{UA}"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "{ШИРОТА}",
+          "longitude": "{ДОЛГОТА}"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "{Monday}",
+            "{Tuesday}",
+            "{Wednesday}",
+            "{Thursday}",
+            "{Friday}",
+            "{Saturday}"
+          ],
+          "opens": "{08:00}",
+          "closes": "{18:00}"
+        },
+        "priceRange": "{$$}",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "{НАЗВАНИЕ_УСЛУГИ_1}",
+              "description": "{ОПИСАНИЕ_УСЛУГИ_1}"
+            },
+            {
+              "@type": "Offer",
+              "name": "{НАЗВАНИЕ_УСЛУГИ_2}",
+              "description": "{ОПИСАНИЕ_УСЛУГИ_2}"
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "{4.9}",
+          "reviewCount": "{47}",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-line">
+          <div class="logo">
+            <a href="./index.html">
+              <p>
+                ЛОГО <br />
+                ГАЗ НА АВТО
+              </p>
+            </a>
+          </div>
+          <nav class="navigation">
+            <ul class="nav-list">
+              <li><a href="./index.html" class="nav-link">ГОЛОВНА</a></li>
+              <li>
+                <a href="./works.html" class="nav-link">НАШІ РОБОТИ</a>
+              </li>
+              <li>
+                <a href="./price.html" class="nav-link">НАШІ ЦІНИ</a>
+              </li>
+              <li>
+                <a href="./contacts.html" class="nav-link">КОНТАКТИ</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-contacts">
+            <div class="phones-column">
+              <div>
+                <a href="tel:+380992273615" class="phone-link"
+                  >+38 (099) 777-55-33</a
+                >
+              </div>
+              <div>
+                <a href="tel:+380992273615" class="phone-link"
+                  >+38 (099) 777-55-33</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">
+            ЦІНИ НА ВСТАНОВЛЕННЯ ГБО <br />
+            НА НАШОМУ СТО У ХАРКОВІ
+          </h1>
+          <p class="hero-content">
+            Дізнайся яка вартість обладнання саме на твій авто!
+          </p>
+          <button type="button" class="details-hero-btn">ДІЗНАТИСЬ</button>
+          <div class="hero-icon-container">
+            <div>
+              <p>
+                ПРОВЕДЕНО РОБІТ <br />
+                ТІЛЬКИ ЗА ЦЕЙ РІК:
+              </p>
+            </div>
+            <div>
+              <p class="hero-nubmer">127</p>
+              <p>
+                МОНТАЖІВ<br />
+                ГАЗОВОГО ОБЛАДНАННЯ
+              </p>
+            </div>
+            <div>
+              <p class="hero-nubmer">436</p>
+              <p>
+                ТЕХНІЧНИХ<br />
+                ОБСЛУГОВУВАНЬ
+              </p>
+            </div>
+            <div>
+              <p class="hero-nubmer">821</p>
+              <p>ДІАГНОСТИК<br />ТА НАЛАШТУВАНЬ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="container">
+          <h2 class="price-title">Ціни ГБО, виробники та особливості</h2>
+          <div class="top-price-contaoner">
+            <img
+              class="best-price"
+              src="./src/img/best-price.png"
+              alt="кращі пропозиції по встановленню гбо"
+              loading="lazy"
+            />
+            <p class="top-price-content">
+              Наша компанія пропонує встаровлення тільки якісного, перевіренного
+              обладнання ГБО та професіональне обслуговування на европейському
+              рівні. Ми підберем максимально комфортні умови та час для
+              переобладнання Вашого авто на газ, також надамо спеціалізованой
+              сервіс і гарантійне обслуговування!
+            </p>
+          </div>
+          <h2 class="by-price">Скільки вартіє встановити ГБО?</h2>
+          <div class="price-container">
+            <div class="card-price">
+              <h3>Акційний</h3>
+              <span class="generation">ГБО 4 покоління:</span>
+              <ul class="country-list">
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Yota NEXT, Турція</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Tomasetto, Італія</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Yota Mars, Турція</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>БВ балон 42л, Европа</p>
+                </li>
+              </ul>
+
+              <span class="price">250 €</span>
+              <span class="engine">* двигун на 4 циліндри</span>
+              <button type="button" class="details-hero-btn price-btn">
+                ОБРАТИ
+              </button>
+            </div>
+
+            <div class="card-price">
+              <h3>Оптимальний</h3>
+              <span class="generation">ГБО 4 покоління:</span>
+              <ul class="country-list">
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Stag GoFast, Польща</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Tomasetto, Італія</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>AEB, Італія</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Новий балон 42л, Харків</p>
+                </li>
+              </ul>
+
+              <span class="price">400 €</span>
+              <span class="engine">* двигатель 4 цилиндра</span>
+              <button type="button" class="details-hero-btn price-btn">
+                ОБРАТИ
+              </button>
+            </div>
+
+            <div class="card-price">
+              <h3>Преміум</h3>
+              <span class="generation">ГБО 4 покоління:</span>
+              <ul class="country-list">
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Stag QBox, Польща</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Tomasetto, Італія</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Barracuda, Польща</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Новий балон 42л, Европа</p>
+                </li>
+              </ul>
+
+              <span class="price">от 550 €</span>
+              <span class="engine">* двигатель 4 цилиндра</span>
+              <button type="button" class="details-hero-btn price-btn">
+                ОБРАТИ
+              </button>
+            </div>
+
+            <div class="card-price">
+              <h3>
+                Встановлюєм 2 покоління: <br />
+                легкові та вантажні
+              </h3>
+              <ul class="country-list">
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Перемикач Stag</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Змішувач або врізки</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Tomasetto, Італія</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>БВ балон 42л, Европа</p>
+                </li>
+              </ul>
+              <span class="price">від 200 €</span>
+              <button type="button" class="details-hero-btn price-btn">
+                ОБРАТИ
+              </button>
+            </div>
+
+            <div class="card-price">
+              <h3>
+                Встановлюєм 5 покоління: <br />
+                FSI, Ecotec, GDI
+              </h3>
+              <ul class="country-list">
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Stag DPI, Польща</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Tomasetto, Італія</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Barracuda, Польща</p>
+                </li>
+                <li class="country">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12L10 17L20 7"
+                      stroke="#f81a37"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <p>Новий балон 42л, Харків</p>
+                </li>
+              </ul>
+              <span class="price">від 550 €</span>
+              <button type="button" class="details-hero-btn price-btn">
+                ОБРАТИ
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
