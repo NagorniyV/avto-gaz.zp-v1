@@ -6,6 +6,10 @@
     background-repeat: no-repeat;
 }
 
+.main-hero{
+    height: 100vh;
+}
+
 .hero-title{
     color: white;
     margin-top: 240px;
