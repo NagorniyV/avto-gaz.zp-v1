@@ -4,9 +4,6 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-.main-hero{
     height: 100vh;
 }
 
@@ -84,7 +81,7 @@
 .hero-icon-container{
     display: flex;
     justify-content: space-between;
-    margin-top: 64px;
+    margin-top: auto;
 }
 
 .hero-icon-container > div{
