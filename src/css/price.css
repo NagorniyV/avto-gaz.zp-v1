@@ -1,6 +1,6 @@
 .price-title{
     text-align: center;
-    font-size: 48px;
+    font-size: 42px;
     margin-bottom: 30px
 }
 
@@ -11,15 +11,17 @@
 }
 
 .top-price-content{
-    font-size: 26px;
+    font-size: 22px;
     text-indent: 30px;
+    max-width: 620px;
 }
 
-.top-price-contaoner {
+.top-price-container {
     display: flex;
     align-items: center;
     gap: 40px;
-    max-width: 100%;
+    margin: 0px auto;
+    justify-content: center;
 }
 
 .best-price {
@@ -47,9 +49,8 @@
 }
 
 .card-price {
-    /* flex: 1; */
     min-width: 300px;
-background: linear-gradient(135deg, #dfd4db 0%, #e9e1e7 50%, #f3eef2 100%);
+    background: linear-gradient(135deg, #dfd4db 0%, #e9e1e7 50%, #f3eef2 100%);
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
