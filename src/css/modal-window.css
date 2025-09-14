@@ -208,6 +208,10 @@ body.modal-open::after {
      gap: 5px;
  }
 
+ .mobile-header-colum{
+    color: #101010;
+ }
+
  /* Медиа запросы для мобильной версии */
  @media (max-width: 440px) {
      .burger-menu {
