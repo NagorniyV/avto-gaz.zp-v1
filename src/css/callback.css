@@ -56,8 +56,18 @@
     width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 440px) {
     .discount-subtitle {
         font-size: 16px;
+        text-align: center;
+    }
+
+    .callback-container{
+        flex-direction: column-reverse;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
     }
 }

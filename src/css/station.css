@@ -60,33 +60,6 @@
     transform: scale(1.05);
 }
 
-/* Адаптивність */
-@media (max-width: 768px) {
-    .station-card-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    .station-card-container>div {
-        padding: 1.2rem;
-    }
-
-    .station-card-container h3 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .station-card-container {
-        gap: 1rem;
-    }
-
-    .station-card-container>div {
-        padding: 1rem;
-    }
-}
-
 .station-btn{
     margin: 20px auto 90px auto;
     padding: 14px 70px;
@@ -118,3 +91,33 @@
     font-size: 18px;
 }
 
+/* Адаптивність */
+@media (max-width: 768px) {
+    .station-card-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .station-card-container>div {
+        padding: 1.2rem;
+    }
+
+    .station-card-container h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .station-card-container {
+        gap: 1rem;
+    }
+
+    .station-card-container>div {
+        padding: 1rem;
+    }
+
+    .our-servise{
+        flex-direction: column-reverse;
+    }
+}

@@ -1,23 +1,24 @@
-/* Styles for Mobile devices */
+/* Styles for Desktop devices */
 .container {
-    min-width: 320px;
-    max-width: 375px;
-    margin: 0 auto;
-    /* padding: 0 16px 64px 16px; */
+    max-width: 1200px;
+    padding: 32px 32px 32px 32px;
 }
 
 /* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .container {
         max-width: 768px;
-        /* padding: 0 32px 96px 32px; */
+        padding: 32px 32px 32px 32px;
     }
 }
 
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1440px) {
+/* Styles for Mobile devices */
+@media only screen and (max-width: 440px) {
     .container {
-        max-width: 1200px;
-        padding: 32px 32px 32px 32px;
+        min-width: 320px;
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 18px 18px;
     }
+
 }

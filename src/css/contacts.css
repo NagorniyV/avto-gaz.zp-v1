@@ -63,3 +63,28 @@
     opacity: 0.2;
     z-index: -1;
 }
+
+ @media (max-width: 440px){
+    .contacts-div{
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+
+    .header-contacts{
+        text-align: left;
+    }
+
+    .phone-link-contacts{
+        color: #f3f3f3;
+        font-weight: 500;
+    }
+
+    .map{
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .social-link{
+        justify-content: space-between;
+    }
+ }

@@ -112,3 +112,55 @@ document.addEventListener('DOMContentLoaded', function() {
     closeModal();
   });
 });
+
+// БУРГЕР КНОПКА
+ document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileHeaderColumn = document.querySelector('.mobile-header-colum');
+    
+    // Проверяем что элементы существуют (только на мобильных)
+    if (!burgerMenu || !mobileHeaderColumn) return;
+    
+    // Проверяем что мы на мобильном устройстве
+    if (window.innerWidth > 768) return;
+    
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        mobileHeaderColumn.classList.toggle('active');
+        document.body.style.overflow = mobileHeaderColumn.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Закрытие меню при клике на ссылку в мобильном меню
+    const navLinks = document.querySelectorAll('.mobile-header-colum .nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+            mobileHeaderColumn.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Закрытие меню при клике вне области меню
+    document.addEventListener('click', function(event) {
+        if (mobileHeaderColumn.classList.contains('active') && 
+            !mobileHeaderColumn.contains(event.target) && 
+            !burgerMenu.contains(event.target)) {
+            burgerMenu.classList.remove('active');
+            mobileHeaderColumn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Оптимизированный ресайз
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (window.innerWidth > 768) {
+                burgerMenu.classList.remove('active');
+                mobileHeaderColumn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }, 250);
+    });
+});

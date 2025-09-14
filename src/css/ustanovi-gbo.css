@@ -30,7 +30,7 @@
     border-radius: 12px;
     padding: 30px;
     border-left: 4px solid #f81a37;
-    width: 100%;
+    width: 90%;
     max-width: 350px;
     position: relative;
     transition: all 0.3s ease;
@@ -78,7 +78,7 @@
 
 
               
-@media (max-width: 600px) {            
+@media (max-width: 440px) {            
     .card {
         padding: 20px;
     }
@@ -87,12 +87,17 @@
         font-size: 20px;
     }
     
-                .card::before {
-                top: -12px;
-                left: -12px;
-                width: 35px;
-                height: 35px;
-                font-size: 16px;
-            }
+    .card::before {
+        top: -12px;
+        left: -12px;
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
 }
 

@@ -73,3 +73,13 @@
 .brend-btn{
     margin: 16px auto;
 }
+
+@media (max-width: 440px){
+    .seo-content{
+        flex-direction: column;
+    }
+
+    .brends-container{
+        flex-direction: column;
+    }
+}

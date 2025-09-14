@@ -7,37 +7,6 @@
     color: #f81a37;
 }
 
-.fotocards {
-    display: flex;
-    width: 100%;
-    gap: 12px;
-    margin-bottom: 36px;
-}
-
-.fotocards img {
-    flex: 1;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
-}
-
-/* Увеличиваем картинку при наведении */
-.fotocards img:hover {
-    transform: scale(2);
-    z-index: 1;
-}
-
-/* Когда наведен контейнер, все картинки затемняются */
-.fotocards:hover img {
-    filter: brightness(50%);
-}
-
-/* Но та, на которую наведен курсор, остаётся яркой */
-.fotocards img:hover {
-    filter: brightness(100%);
-}
-
 .gallery-groop>h3{
     color: #f3f3f3;
     font-size: 28px;
@@ -82,4 +51,122 @@
 .gallery-content{
     text-indent: 30px;
     font-size: 18px;
+}
+
+.fotocards {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 36px;
+    padding: 10px 0;
+}
+
+.fotocards img {
+    flex: 1;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Увеличиваем картинку при наведении */
+.fotocards img:hover {
+    transform: scale(2);
+    z-index: 1;
+}
+
+/* Когда наведен контейнер, все картинки затемняются */
+.fotocards:hover img {
+    filter: brightness(50%);
+}
+
+/* Но та, на которую наведен курсор, остаётся яркой */
+.fotocards img:hover {
+    filter: brightness(100%);
+}
+
+/* Стили для мобильной горизонтальной прокрутки */
+@media (max-width: 768px) {
+    .fotocards {
+        overflow-x: auto;
+        /* Горизонтальная прокрутка */
+        overflow-y: hidden;
+        /* Скрываем вертикальную прокрутку */
+        -webkit-overflow-scrolling: touch;
+        /* Плавная прокрутка на iOS */
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        /* Скрываем scrollbar в Firefox */
+        gap: 8px;
+        padding: 15px;
+        margin: 0 -15px 36px -15px;
+        /* Убираем отступы по бокам */
+    }
+
+    .fotocards::-webkit-scrollbar {
+        display: none;
+        /* Скрываем scrollbar в Chrome/Safari */
+    }
+
+    .fotocards img {
+        flex: 0 0 auto;
+        /* Запрещаем растягивание на мобильных */
+        width: 280px;
+        /* Фиксированная ширина для прокрутки */
+        height: 180px;
+        scroll-snap-align: start;
+    }
+
+    /* Отключаем эффекты hover на мобильных устройствах */
+    .fotocards img:hover {
+        transform: none;
+        filter: none;
+        z-index: auto;
+    }
+
+    .fotocards:hover img {
+        filter: none;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 440px) {
+    .fotocards img {
+        width: 425px;
+        height: 272px;
+    }
+
+    .ustanovka-gbo{
+        grid-template-columns: none;
+    }
+}
+
+/* Индикатор что есть прокрутка (опционально) */
+.fotocards::after {
+    content: '← прокрутите →';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .fotocards::after {
+        display: block;
+    }
+}
+
+/* Градиент по краям для индикации прокрутки (опционально) */
+@media (max-width: 768px) {
+    .fotocards {
+        mask: linear-gradient(90deg,
+                transparent,
+                white 10%,
+                white 90%,
+                transparent);
+    }
 }

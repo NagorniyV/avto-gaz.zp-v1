@@ -164,4 +164,28 @@
     .card-price {
         max-width: 100%;
     }
+
+    .top-price-container{
+        flex-direction: column;
+    }
+
+    .best-price{
+        width: 100%;
+    }
+
+    .top-price-content{
+        text-align: center;
+    }
+
+    .by-price{
+        margin-top: 30px;
+    }
+
+    .country-list{
+        margin-left: 0px;
+    }
+
+    .benefits-price{
+        flex-direction: column;
+    }
 }

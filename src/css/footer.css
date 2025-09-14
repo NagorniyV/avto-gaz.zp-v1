@@ -121,7 +121,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 440px) {
     .footer-card {
         position: relative;
         width: 100%;
@@ -130,7 +130,7 @@
         border-radius: 0;
         box-shadow: none;
         border-left: none;
-        border-top: 5px solid #e74c3c;
+        border-top: none;
     }
 
     .footer {

@@ -89,11 +89,12 @@
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 440px) {
             .review-card {
                 flex: 0 0 100%;
                 flex-direction: column;
                 height: auto;
+                
             }
             
             .client-info, .review-content {
@@ -108,5 +109,6 @@
             
             .reviews-container {
                 gap: 20px;
+                flex-direction: column;
             }
         }
