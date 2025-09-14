@@ -81,7 +81,7 @@
 .hero-icon-container{
     display: flex;
     justify-content: space-between;
-    margin-top: auto;
+    /* margin-top: auto; */
 }
 
 .hero-icon-container > div{

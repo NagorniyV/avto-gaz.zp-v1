@@ -59,3 +59,56 @@ document.addEventListener('DOMContentLoaded', function () {
             faqItems[0].classList.add('active');
         }
     });
+
+
+    // МОДАЛЬНОЕ ОКНО
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Получаем все элементы с классом .details-hero-btn
+  const openBtns = document.querySelectorAll('.details-hero-btn');
+  const modal = document.getElementById('callbackModal');
+  const closeBtn = document.querySelector('.modal-close');
+  const form = document.getElementById('modalForm');
+  
+  // Функция для открытия модального окна
+  function openModal() {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  
+  // Функция для закрытия модального окна
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  
+  // Добавляем обработчик для КАЖДОЙ кнопки
+  openBtns.forEach(function(btn) {
+    btn.addEventListener('click', openModal);
+  });
+  
+  // Закрытие модального окна по клику на крестик
+  closeBtn.addEventListener('click', closeModal);
+  
+  // Закрытие модального окна по клику вне его области
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Закрытие по клавише Escape
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+  
+  // Обработка отправки формы
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Здесь код для отправки данных формы
+    alert('Форма отправлена!');
+    closeModal();
+  });
+});
