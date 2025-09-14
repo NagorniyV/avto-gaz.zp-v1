@@ -240,9 +240,9 @@ body.modal-open::after {
      }
 
      .nav-link, .phone-link-mobile{
-        font-size: 32px;
+        font-size: 28px;
         border: 2px solid #7c5b6d;
-        padding: 20px 40px;
+        padding: 10px 40px;
         border-radius: 10px;
         background: linear-gradient(135deg, #f5f0f4 0%, #e8dde5 50%, #dbc9d6 100%);
      }

@@ -70,4 +70,14 @@
         display: flex;
         flex-direction: column;
     }
+
+    .callback-title{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .phone-input{
+        font-size: 32px;
+        text-align: center;
+    }
 }
