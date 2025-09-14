@@ -61,10 +61,25 @@
 
 .gallery-groop>p{
     color: #f3f3f3;
-    font-size: 24px;
+    font-size: 16px;
     margin-top: 12px;
+    text-indent: 30px;
 }
 
 .red-span{
     color: #f81a37;
+}
+
+.gallery-section{
+    color: #f3f3f3;
+}
+
+.gallery-section h1{
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.gallery-content{
+    text-indent: 30px;
+    font-size: 18px;
 }

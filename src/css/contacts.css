@@ -1,0 +1,65 @@
+.contacts-section{
+    position: relative;
+    background-image: url(../img/GAZ-NA-AVTO-BG.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #f3f3f3;
+}
+
+.contacts-title{
+    margin-top: 150px;
+}
+
+.contacts-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+}
+
+.phones-contacts{
+    display: flex;
+    flex-direction: column;
+    color: #f3f3f3;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.social-link{
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.last-title-h3{
+    font-size: 26px;
+}
+
+
+.developer-content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    
+}
+
+.developer {
+    position: relative;
+    z-index: 1;
+}
+
+.developer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/footer-developer.webp);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
