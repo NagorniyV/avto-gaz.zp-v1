@@ -111,4 +111,8 @@
                 gap: 20px;
                 flex-direction: column;
             }
+
+            .otzivy-title{
+                font-size: 36px;
+            }
         }

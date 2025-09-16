@@ -4,7 +4,7 @@
 }
 
 .calculator-title {
-    font-size: 2.5rem;
+    font-size: 42px;
     color: #f81a37;
     margin-bottom: 15px;
 }
@@ -91,7 +91,7 @@
 }
 
 /* Адаптивність */
-@media (max-width: 768px) {
+@media (max-width: 440px) {
     .calculator-content {
         grid-template-columns: 1fr;
     }
@@ -109,6 +109,6 @@
     }
 
     .calculator-title {
-        font-size: 2rem;
+        font-size: 36px;
     }
 }

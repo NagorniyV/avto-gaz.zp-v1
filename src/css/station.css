@@ -120,4 +120,10 @@
     .our-servise{
         flex-direction: column-reverse;
     }
+
+    .station-title{
+    font-size: 36px;
+    text-align: center;
+
+}
 }

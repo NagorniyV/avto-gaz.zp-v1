@@ -179,6 +179,7 @@
 
     .by-price{
         margin-top: 30px;
+        font-size: 36px;
     }
 
     .country-list{
@@ -187,5 +188,9 @@
 
     .benefits-price{
         flex-direction: column;
+    }
+
+    .price-title{
+        font-size: 36px;
     }
 }

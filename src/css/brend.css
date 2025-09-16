@@ -82,4 +82,8 @@
     .brends-container{
         flex-direction: column;
     }
+
+    .brend-title{
+        font-size: 36px;
+    }
 }

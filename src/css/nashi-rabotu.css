@@ -43,9 +43,10 @@
     color: #f3f3f3;
 }
 
-.gallery-section h1{
+.main-gallery-title{
     text-align: center;
     margin-bottom: 18px;
+    font-size: 36px;
 }
 
 .gallery-content{
@@ -139,6 +140,10 @@
 
     .ustanovka-gbo{
         grid-template-columns: none;
+    }
+
+    .main-gallery-title{
+        font-size: 26px;
     }
 }
 
