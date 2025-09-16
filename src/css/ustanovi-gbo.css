@@ -81,10 +81,15 @@
 @media (max-width: 440px) {            
     .card {
         padding: 20px;
+        width: 80%;
     }
             
     .card-title {
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    .card-description{
+        font-size: 14px;
     }
     
     .card::before {
@@ -98,6 +103,14 @@
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
 
+    }
+
+    .ustanovi-gbo-title{
+    font-size: 36px;
+    }
+
+    .step-btn{
+        font-size: 20px;
     }
 }
 

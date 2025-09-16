@@ -6,7 +6,7 @@
 }
 
 .footer-card > h3{
-    color: #f81a37;
+    color: #ff2340;
 }
 
 .footer {
@@ -32,12 +32,12 @@
     width: 350px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
-    border-left: 5px solid #e74c3c;
+    border-left: 5px solid #ff2340;
 }
 
 .footer-card h3 {
     font-size: 24px;
-    color: #e74c3c;
+    color: #ff2340;
     margin-bottom: 10px;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
@@ -74,7 +74,7 @@
 }
 
 .footer-list a:hover {
-    color: #e74c3c;
+    color: #ff2340;
 }
 
 .footer-list a[href^="tel:"] {
@@ -83,11 +83,11 @@
 }
 
 .footer-list a[href^="mailto:"] {
-    color: #3498db;
+    color: #ff2340;
 }
 
 .footer-list a[href^="mailto:"]:hover {
-    color: #e74c3c;
+    color: #ff2340;
 }
 
 .footer-list p {
@@ -101,7 +101,7 @@
     justify-content: center;
     width: 30px;
     height: 30px;
-    background: #e74c3c;
+    background: #ff2340;
     color: white;
     border-radius: 50%;
     margin-right: 10px;
@@ -136,11 +136,14 @@
     .footer {
         height: auto;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        width: 80%;
+        margin: 0px auto;
     }
 
     .footer iframe {
-        height: 400px;
+        height: 350px;
+        border-radius: 20px;
     }
 
     h1 {
