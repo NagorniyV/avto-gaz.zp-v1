@@ -10,7 +10,7 @@
 .ustanovi-gbo-title{
     text-align: center;
     color: #f3f3f3;
-    font-size: 48px;
+    font-size: 42px;
 }
 
 .ustanovi-gbo-title > span {
@@ -61,14 +61,14 @@
 }
                
 .card-title {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 15px;
     color: #f81a37;
 }
         
 .card-description {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px;
+    /* line-height: 1.6; */
     color: #e0e0e0;
 }
 
@@ -111,6 +111,14 @@
 
     .step-btn{
         font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+        
+    .card-description {
+        font-size: 16px;
     }
 }
 
