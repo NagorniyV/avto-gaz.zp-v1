@@ -9,9 +9,10 @@
 
 .header-line{
     display: flex;
-    margin: 32px auto;
     justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
+    /* margin-top: 12px; */
 }
 
 .nav-list, .nav-link{
@@ -52,4 +53,17 @@
 
 .nav-link.active::after {
   width: 100%;
+}
+
+.logo{
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.logo-div{
+  /* background: linear-gradient(to right, #f81a37 15%, #f81a37 30%, #1a0000 70%, #000000 100%); */
+  background: linear-gradient(90deg, #f81a37 0%, #8c0d1b 40%, #1a0000 70%, #000000 100%);
+  padding: 4px 12px;
+  border-radius: 14px;
+  border: 3px solid #f3f3f3
 }

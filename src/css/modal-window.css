@@ -182,12 +182,6 @@ body.modal-open::after {
  }
 
  /* Header line для десктопной версии */
- .header-line {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
-
  .logo a {
      text-decoration: none;
      /* color: #333; */
