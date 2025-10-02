@@ -61,106 +61,198 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // МОДАЛЬНОЕ ОКНО
-
+// МОДАЛЬНОЕ ОКНО И БУРГЕР КНОПКА
 document.addEventListener('DOMContentLoaded', function() {
-  // Получаем все элементы с классом .details-hero-btn
-  const openBtns = document.querySelectorAll('.details-hero-btn');
-  const modal = document.getElementById('callbackModal');
-  const closeBtn = document.querySelector('.modal-close');
-  const form = document.getElementById('modalForm');
-  
-  // Функция для открытия модального окна
-  function openModal() {
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
-  
-  // Функция для закрытия модального окна
-  function closeModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  
-  // Добавляем обработчик для КАЖДОЙ кнопки
-  openBtns.forEach(function(btn) {
-    btn.addEventListener('click', openModal);
-  });
-  
-  // Закрытие модального окна по клику на крестик
-  closeBtn.addEventListener('click', closeModal);
-  
-  // Закрытие модального окна по клику вне его области
-  window.addEventListener('click', function(event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-  
-  // Закрытие по клавише Escape
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape' && modal.style.display === 'block') {
-      closeModal();
-    }
-  });
-  
-  // Обработка отправки формы
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Здесь код для отправки данных формы
-    alert('Форма отправлена!');
-    closeModal();
-  });
-});
-
-// БУРГЕР КНОПКА
- document.addEventListener('DOMContentLoaded', function() {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const mobileHeaderColumn = document.querySelector('.mobile-header-colum');
+    console.log('🚀 Инициализация модального окна');
     
-    // Проверяем что элементы существуют (только на мобильных)
-    if (!burgerMenu || !mobileHeaderColumn) return;
+    // Элементы модальных окон
+    const callbackModal = document.getElementById('callbackModal');
+    const successModal = document.getElementById('successModal');
+    const modalForm = document.getElementById('modalForm');
     
-    // Проверяем что мы на мобильном устройстве
-    if (window.innerWidth > 768) return;
-    
-    burgerMenu.addEventListener('click', function() {
-        burgerMenu.classList.toggle('active');
-        mobileHeaderColumn.classList.toggle('active');
-        document.body.style.overflow = mobileHeaderColumn.classList.contains('active') ? 'hidden' : '';
+    console.log('Найдены элементы:', {
+        callbackModal: !!callbackModal,
+        successModal: !!successModal,
+        modalForm: !!modalForm
     });
 
-    // Закрытие меню при клике на ссылку в мобильном меню
-    const navLinks = document.querySelectorAll('.mobile-header-colum .nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            burgerMenu.classList.remove('active');
-            mobileHeaderColumn.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Закрытие меню при клике вне области меню
-    document.addEventListener('click', function(event) {
-        if (mobileHeaderColumn.classList.contains('active') && 
-            !mobileHeaderColumn.contains(event.target) && 
-            !burgerMenu.contains(event.target)) {
-            burgerMenu.classList.remove('active');
-            mobileHeaderColumn.classList.remove('active');
-            document.body.style.overflow = '';
+    // ОТКРЫТИЕ МОДАЛЬНОГО ОКНА
+    document.addEventListener('click', function(e) {
+        // Открытие по кнопке callback-btn
+        if (e.target.classList.contains('details-hero-btn')) {
+            console.log('✅ Клик по кнопке details-hero-btn');
+            
+            if (callbackModal) {
+                callbackModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                console.log('✅ Модальное окно открыто');
+            } else {
+                console.error('❌ callbackModal не найден');
+            }
         }
     });
 
-    // Оптимизированный ресайз
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
-            if (window.innerWidth > 768) {
+    // ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
+    document.addEventListener('click', function(e) {
+        // Закрытие по крестику
+        if (e.target.classList.contains('modal-close')) {
+            closeModals();
+        }
+        
+        // Закрытие по клику вне окна
+        if (e.target === callbackModal || e.target === successModal) {
+            closeModals();
+        }
+    });
+
+    // Закрытие по ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModals();
+        }
+    });
+
+    function closeModals() {
+        if (callbackModal) callbackModal.style.display = 'none';
+        if (successModal) successModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // ОБРАБОТКА ФОРМЫ
+    if (modalForm) {
+        modalForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const phone = document.getElementById('modalPhone').value;
+            
+            // Проверка телефона
+            if (!phone) {
+                alert('Будь ласка, введіть номер телефону');
+                return;
+            }
+
+            // Сбор данных формы
+            const formData = {
+                name: document.getElementById('modalName').value,
+                phone: phone,
+                carModel: document.getElementById('carModel').value,
+                timestamp: new Date().toLocaleString('uk-UA')
+            };
+
+            console.log('📧 Данные формы:', formData);
+
+            // Отправка в Telegram (раскомментировать когда нужно)
+            // sendToTelegram(formData);
+
+            // Показ окна успеха
+            if (callbackModal) callbackModal.style.display = 'none';
+            if (successModal) successModal.style.display = 'block';
+
+            // Автоматическое закрытие через 3 секунды
+            setTimeout(() => {
+                closeModals();
+                modalForm.reset();
+            }, 3000);
+        });
+    }
+
+    // МАСКА ДЛЯ ТЕЛЕФОНА
+    const modalPhone = document.getElementById('modalPhone');
+    if (modalPhone) {
+        modalPhone.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.startsWith('38')) {
+                value = value.substring(2);
+            }
+            let formattedValue = '+38 (';
+            
+            if (value.length > 0) {
+                formattedValue += value.substring(0, 3);
+            }
+            if (value.length > 3) {
+                formattedValue += ') ' + value.substring(3, 6);
+            }
+            if (value.length > 6) {
+                formattedValue += '-' + value.substring(6, 10);
+            }
+            
+            e.target.value = formattedValue;
+        });
+    }
+
+    // БУРГЕР МЕНЮ
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileHeaderColumn = document.querySelector('.mobile-header-colum');
+    
+    if (burgerMenu && mobileHeaderColumn) {
+        burgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            burgerMenu.classList.toggle('active');
+            mobileHeaderColumn.classList.toggle('active');
+            document.body.style.overflow = mobileHeaderColumn.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Закрытие меню при клике на ссылку
+        const navLinks = document.querySelectorAll('.mobile-header-colum .nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                burgerMenu.classList.remove('active');
+                mobileHeaderColumn.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Закрытие меню при клике вне области
+        document.addEventListener('click', function(event) {
+            if (mobileHeaderColumn.classList.contains('active') && 
+                !mobileHeaderColumn.contains(event.target) && 
+                !burgerMenu.contains(event.target)) {
                 burgerMenu.classList.remove('active');
                 mobileHeaderColumn.classList.remove('active');
                 document.body.style.overflow = '';
             }
-        }, 250);
-    });
+        });
+
+        // Закрытие меню при ресайзе
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && mobileHeaderColumn.classList.contains('active')) {
+                burgerMenu.classList.remove('active');
+                mobileHeaderColumn.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
+
+// ФУНКЦИЯ ОТПРАВКИ В TELEGRAM
+function sendToTelegram(data) {
+    const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
+    const chatIds = ['398501551', 'ВТОРОЙ_CHAT_ID', 'ТРЕТИЙ_CHAT_ID']; // Добавьте нужные ID
+    
+    const message = `📞 Нова заявка з сайту!\n\n👤 Ім'я: ${data.name || 'Не вказано'}\n📱 Телефон: ${data.phone}\n🚗 Авто: ${data.carModel || 'Не вказано'}\n⏰ Час: ${data.timestamp}`;
+    
+    // Отправляем сообщение всем в массиве
+    chatIds.forEach(chatId => {
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message,
+                parse_mode: 'HTML'
+            })
+        })
+        .then(response => response.json())
+        .then(result => {
+            console.log(`✅ Сообщение отправлено в Telegram для chat_id ${chatId}:`, result);
+            if (!result.ok) {
+                console.error(`Ошибка для chat_id ${chatId}:`, result);
+            }
+        })
+        .catch(error => {
+            console.error(`❌ Ошибка отправки в Telegram для chat_id ${chatId}:`, error);
+        });
+    });
+}
