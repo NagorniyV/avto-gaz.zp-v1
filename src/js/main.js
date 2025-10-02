@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ФУНКЦИЯ ОТПРАВКИ В TELEGRAM
 function sendToTelegram(data) {
     const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
-    const chatIds = ['398501551'];
+    const chatIds = ['398501551', '484881476'];
     
     const message = `📞 Нова заявка з сайту!\n\n👤 Ім'я: ${data.name || 'Не вказано'}\n📱 Телефон: ${data.phone}\n🚗 Авто: ${data.carModel || 'Не вказано'}\n⏰ Час: ${data.timestamp}`;
     
