@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('📧 Данные формы:', formData);
 
             // Отправка в Telegram (раскомментировать когда нужно)
-            // sendToTelegram(formData);
+            sendToTelegram(formData);
 
             // Показ окна успеха
             if (callbackModal) callbackModal.style.display = 'none';
