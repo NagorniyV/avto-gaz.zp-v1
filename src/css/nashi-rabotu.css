@@ -52,6 +52,7 @@
 .gallery-content{
     text-indent: 30px;
     font-size: 18px;
+    margin-bottom: 8px;
 }
 
 .fotocards {
@@ -64,7 +65,8 @@
 
 .fotocards img {
     flex: 1;
-    height: 200px;
+    width: 160px;
+    height: 150px;
     object-fit: cover;
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
@@ -73,7 +75,7 @@
 
 /* Увеличиваем картинку при наведении */
 .fotocards img:hover {
-    transform: scale(2);
+    transform: scale(3);
     z-index: 1;
 }
 
