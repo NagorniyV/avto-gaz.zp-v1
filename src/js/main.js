@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    
 // МОДАЛЬНОЕ ОКНО И БУРГЕР КНОПКА
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Инициализация модального окна');
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ОТКРЫТИЕ МОДАЛЬНОГО ОКНА
     document.addEventListener('click', function(e) {
-        // Открытие по кнопке callback-btn
+        // Открытие по кнопке details-hero-btn
         if (e.target.classList.contains('details-hero-btn')) {
             console.log('✅ Клик по кнопке details-hero-btn');
             
@@ -122,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modalForm) {
         modalForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            console.log('📧 ОТПРАВКА ФОРМЫ - НАЧАЛО');
             
             const phone = document.getElementById('modalPhone').value;
             
@@ -140,9 +142,15 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             console.log('📧 Данные формы:', formData);
+            console.log('🟢 ВЫЗЫВАЕМ sendToTelegram...');
 
-            // Отправка в Telegram (раскомментировать когда нужно)
-            sendToTelegram(formData);
+            // ВЫЗОВ ФУНКЦИИ
+            try {
+                sendToTelegram(formData);
+                console.log('🟢 sendToTelegram ВЫЗВАНА УСПЕШНО');
+            } catch (error) {
+                console.error('❌ ОШИБКА при вызове sendToTelegram:', error);
+            }
 
             // Показ окна успеха
             if (callbackModal) callbackModal.style.display = 'none';
@@ -224,50 +232,88 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ФУНКЦИЯ ОТПРАВКИ В TELEGRAM
+// ФУНКЦИЯ ОТПРАВКИ В TELEGRAM - УПРОЩЕННАЯ ВЕРСИЯ
 function sendToTelegram(data) {
+    console.log('🟢 sendToTelegram ВЫЗВАНА!', data);
+    
     const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
     const chatIds = ['398501551', '484881476'];
     
-    const message = `📞 Нова заявка з сайту!\n\n👤 Ім'я: ${data.name || 'Не вказано'}\n📱 Телефон: ${data.phone}\n🚗 Авто: ${data.carModel || 'Не вказано'}\n⏰ Час: ${data.timestamp}`;
+    // Кодируем сообщение для URL
+    const text = encodeURIComponent(
+        `📞 Нова заявка з сайту!\n\n👤 Ім'я: ${data.name || 'Не вказано'}\n📱 Телефон: ${data.phone}\n🚗 Авто: ${data.carModel || 'Не вказано'}\n⏰ Час: ${data.timestamp}`
+    );
     
-    console.log('🟡 Отправка в Telegram:', data);
+    console.log('🟡 Закодированное сообщение:', text);
 
-    // Отправляем сообщение всем в массиве
-    chatIds.forEach(chatId => {
-        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-        const body = {
-            chat_id: chatId,
-            text: message,
-            parse_mode: 'HTML'
-        };
-
-        console.log(`🟡 Отправка на ${url} для chat_id: ${chatId}`);
+    // Отправляем сообщение всем в массиве через GET запросы
+    chatIds.forEach((chatId, index) => {
+        console.log(`🟡 Отправка ${index + 1}/${chatIds.length} для chat_id: ${chatId}`);
         
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(body)
-        })
-        .then(response => {
-            console.log('🟡 Статус ответа:', response.status);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(result => {
-            console.log('✅ Ответ Telegram:', result);
-            if (result.ok) {
-                console.log(`✅ Успешно отправлено для ${chatId}`);
-            } else {
-                console.error(`❌ Ошибка Telegram: ${result.description} для ${chatId}`);
-            }
-        })
-        .catch(error => {
-            console.error(`❌ Ошибка отправки для ${chatId}:`, error);
-        });
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`;
+        
+        console.log('🟡 URL запроса:', url);
+        
+        // Используем fetch с обработкой ошибок
+        fetch(url)
+            .then(response => {
+                console.log(`🟡 Ответ получен для ${chatId}, статус:`, response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(result => {
+                console.log(`✅ Результат для ${chatId}:`, result);
+                if (result.ok) {
+                    console.log(`✅ УСПЕХ: Сообщение отправлено в Telegram для ${chatId}`);
+                } else {
+                    console.error(`❌ ОШИБКА Telegram для ${chatId}:`, result.description);
+                    
+                    // Если ошибка 403 - бот не может писать пользователю
+                    if (result.error_code === 403) {
+                        console.error(`❌ Бот не может писать пользователю ${chatId}. Начните диалог с ботом.`);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error(`❌ ОШИБКА сети для ${chatId}:`, error);
+                
+                // Альтернативный способ через Image (обходит CORS)
+                const img = new Image();
+                img.src = url;
+                console.log('🟡 Пробуем отправить через Image:', url);
+            });
+    });
+    
+    console.log('🟢 sendToTelegram ЗАВЕРШЕНА');
+}
+
+// АЛЬТЕРНАТИВНАЯ ФУНКЦИЯ ЕСЛИ ОСНОВНАЯ НЕ РАБОТАЕТ
+function sendToTelegramAlternative(data) {
+    console.log('🟢 Альтернативная отправка в Telegram');
+    
+    const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
+    const chatIds = ['398501551', '484881476'];
+    
+    const text = `📞 Нова заявка з сайту!%0A%0A👤 Ім'я: ${data.name || 'Не вказано'}%0A📱 Телефон: ${data.phone}%0A🚗 Авто: ${data.carModel || 'Не вказано'}%0A⏰ Час: ${data.timestamp}`;
+    
+    chatIds.forEach(chatId => {
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`;
+        
+        // Способ 1: через Image (работает всегда)
+        const img = new Image();
+        img.src = url;
+        console.log('🟡 Отправка через Image для', chatId, ':', url);
+        
+        // Способ 2: через XMLHttpRequest
+        try {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.send();
+            console.log('🟡 Отправка через XMLHttpRequest для', chatId);
+        } catch (error) {
+            console.error('❌ Ошибка XMLHttpRequest:', error);
+        }
     });
 }
