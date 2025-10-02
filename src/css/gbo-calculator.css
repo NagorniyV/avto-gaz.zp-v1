@@ -53,7 +53,7 @@
 }
 
 .result-card {
-    background: #f8f9fa;
+    background: #f6f8fa;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -61,9 +61,13 @@
 }
 
 .result-card.highlight {
-    background: linear-gradient(135deg, #f81a37, #d01030);
+    background: linear-gradient(90deg, #0d253b, #f81a37);
     color: white;
     grid-column: span 2;
+}
+
+.result-card.highlight:hover{
+    background: linear-gradient(90deg, #0d253b 50%, #f81a37 100%);
 }
 
 .result-card h3 {
