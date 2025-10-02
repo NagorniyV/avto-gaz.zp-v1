@@ -231,39 +231,43 @@ function sendToTelegram(data) {
     
     const message = `📞 Нова заявка з сайту!\n\n👤 Ім'я: ${data.name || 'Не вказано'}\n📱 Телефон: ${data.phone}\n🚗 Авто: ${data.carModel || 'Не вказано'}\n⏰ Час: ${data.timestamp}`;
     
-    console.log('🟡 Начинаем отправку в Telegram...');
-    console.log('Данные:', data);
-    console.log('Chat IDs:', chatIds);
+    console.log('🟡 Отправка в Telegram:', data);
 
     // Отправляем сообщение всем в массиве
     chatIds.forEach(chatId => {
-        console.log(`🟡 Отправка для chat_id: ${chatId}`);
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const body = {
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML'
+        };
+
+        console.log(`🟡 Отправка на ${url} для chat_id: ${chatId}`);
         
-        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message,
-                parse_mode: 'HTML'
-            })
+            body: JSON.stringify(body)
         })
         .then(response => {
-            console.log('🟡 Получен ответ от Telegram API');
+            console.log('🟡 Статус ответа:', response.status);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             return response.json();
         })
         .then(result => {
-            console.log('✅ Ответ Telegram API:', result);
+            console.log('✅ Ответ Telegram:', result);
             if (result.ok) {
-                console.log(`✅ Сообщение отправлено в Telegram для chat_id ${chatId}`);
+                console.log(`✅ Успешно отправлено для ${chatId}`);
             } else {
-                console.error(`❌ Ошибка Telegram API для chat_id ${chatId}:`, result);
+                console.error(`❌ Ошибка Telegram: ${result.description} для ${chatId}`);
             }
         })
         .catch(error => {
-            console.error(`❌ Ошибка fetch для chat_id ${chatId}:`, error);
+            console.error(`❌ Ошибка отправки для ${chatId}:`, error);
         });
     });
 }
