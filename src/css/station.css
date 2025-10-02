@@ -52,6 +52,7 @@
 }
 
 .station-card-container img {
+    height: 125px;
     margin: 0.5rem 0;
     transition: transform 0.3s ease;
 }
