@@ -290,7 +290,7 @@
  }
 
  /* Медиа запросы для мобильной версии */
- @media (max-width: 440px) {
+ @media (max-width: 670px) {
      .burger-menu {
          display: flex;
      }

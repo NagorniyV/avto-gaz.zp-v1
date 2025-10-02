@@ -76,7 +76,19 @@
     margin: 0px auto;
 }
 
+@media (max-width: 970px){
+        .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+}
 
+@media (max-width: 780px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
               
 @media (max-width: 440px) {            
     .card {
@@ -100,10 +112,7 @@
         font-size: 16px;
     }
 
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
 
-    }
 
     .ustanovi-gbo-title{
     font-size: 36px;

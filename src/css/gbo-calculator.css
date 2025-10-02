@@ -95,7 +95,8 @@
 }
 
 /* Адаптивність */
-@media (max-width: 440px) {
+
+@media (max-width: 645px) {
     .calculator-content {
         grid-template-columns: 1fr;
     }

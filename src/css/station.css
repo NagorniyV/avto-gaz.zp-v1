@@ -107,6 +107,10 @@
     .station-card-container h3 {
         font-size: 1.1rem;
     }
+
+    .our-servise{
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 480px) {
@@ -116,10 +120,6 @@
 
     .station-card-container>div {
         padding: 1rem;
-    }
-
-    .our-servise{
-        flex-direction: column-reverse;
     }
 
     .station-title{

@@ -131,6 +131,26 @@
     .fotocards:hover img {
         filter: none;
     }
+
+    .main-gallery-title{
+        font-size: 28px;
+    }
+
+    .gallery-content{
+        font-size: 14px;
+    }
+
+    .gallery-groop>h3{
+    font-size: 26px;
+    }
+
+    .gallery-groop>p{
+        font-size: 14px;
+    }
+
+    .ustanovka-gbo{
+        font-size: 16px;
+    }
 }
 
 /* Для очень маленьких экранов */
@@ -145,7 +165,11 @@
     }
 
     .main-gallery-title{
-        font-size: 26px;
+        font-size: 22px;
+    }
+
+    .gallery-content{
+        font-size: 14px;
     }
 }
 
@@ -176,4 +200,11 @@
                 white 90%,
                 transparent);
     }
+}
+
+
+@media (max-width: 1100px){
+    .hero-icon-container{
+        display: none;
+    }  
 }

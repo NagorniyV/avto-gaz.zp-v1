@@ -29,10 +29,6 @@
     color: #f8f8f8;
 }
 
-.logo p{
-    color: #f81a37;
-}
-
 .details-hero-btn {
     background: #f81a37;
     color: #f8f8f8;
@@ -96,18 +92,25 @@
     font-size: 18px;
 }
 
-@media only screen and (max-width: 440px) {
+@media (max-width: 680px){
+    .hero-icon-container p{
+        display: none;
+    }
+
     .hero-title {
         margin-top: 150px;
         font-size: 32px;
+    }
 }
+
+@media only screen and (max-width: 440px) {
+    .hero-title {
+        margin-top: 100px;
+        font-size: 26px;
+    }
 
     .hero-content {
        font-size: 20px;
-    }
-
-    .hero-icon-container p{
-        display: none;
     }
 
     .hero-icon-container{

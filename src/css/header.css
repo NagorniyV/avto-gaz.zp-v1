@@ -67,3 +67,9 @@
   border-radius: 14px;
   border: 3px solid #f3f3f3
 }
+
+@media (max-width: 870px){
+  .logo, .logo-div{
+    display: none;
+  }
+}
