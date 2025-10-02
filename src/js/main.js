@@ -227,12 +227,18 @@ document.addEventListener('DOMContentLoaded', function() {
 // ФУНКЦИЯ ОТПРАВКИ В TELEGRAM
 function sendToTelegram(data) {
     const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
-    const chatIds = ['398501551']; // Добавьте нужные ID
+    const chatIds = ['398501551'];
     
     const message = `📞 Нова заявка з сайту!\n\n👤 Ім'я: ${data.name || 'Не вказано'}\n📱 Телефон: ${data.phone}\n🚗 Авто: ${data.carModel || 'Не вказано'}\n⏰ Час: ${data.timestamp}`;
     
+    console.log('🟡 Начинаем отправку в Telegram...');
+    console.log('Данные:', data);
+    console.log('Chat IDs:', chatIds);
+
     // Отправляем сообщение всем в массиве
     chatIds.forEach(chatId => {
+        console.log(`🟡 Отправка для chat_id: ${chatId}`);
+        
         fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
             method: 'POST',
             headers: {
@@ -244,15 +250,20 @@ function sendToTelegram(data) {
                 parse_mode: 'HTML'
             })
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log('🟡 Получен ответ от Telegram API');
+            return response.json();
+        })
         .then(result => {
-            console.log(`✅ Сообщение отправлено в Telegram для chat_id ${chatId}:`, result);
-            if (!result.ok) {
-                console.error(`Ошибка для chat_id ${chatId}:`, result);
+            console.log('✅ Ответ Telegram API:', result);
+            if (result.ok) {
+                console.log(`✅ Сообщение отправлено в Telegram для chat_id ${chatId}`);
+            } else {
+                console.error(`❌ Ошибка Telegram API для chat_id ${chatId}:`, result);
             }
         })
         .catch(error => {
-            console.error(`❌ Ошибка отправки в Telegram для chat_id ${chatId}:`, error);
+            console.error(`❌ Ошибка fetch для chat_id ${chatId}:`, error);
         });
     });
 }
