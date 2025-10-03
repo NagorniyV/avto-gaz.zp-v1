@@ -1,15 +1,20 @@
 .contacts-section{
     position: relative;
-    background-image: url(../img/GAZ-NA-AVTO-BG.png);
+    background-image: url(../img/GAZ-NA-AVTO-BG.webp);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* height: 100vh; */
     color: #f3f3f3;
+    background-color: #000;
+    min-height: 100vh;
 }
 
 .contacts-title{
     margin-top: 150px;
+}
+
+.map{
+    border-radius: 12px;
 }
 
 .contacts-div{
@@ -29,39 +34,13 @@
 
 .social-link{
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    max-width: 500px;
     margin-top: 12px;
 }
 
 .last-title-h3{
     font-size: 26px;
-}
-
-
-.developer-content{
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px;
-    
-}
-
-.developer {
-    position: relative;
-    z-index: 1;
-}
-
-.developer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/footer-developer.webp);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: -1;
 }
 
 .social-btn:hover svg,
@@ -70,11 +49,20 @@
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
 }
 
- @media (max-width: 440px){
+ @media (max-width: 950px){
     .contacts-div{
         flex-direction: column;
         padding: 30px 0px;
     }
+
+    .map{
+        margin-top: 20px;
+    }
+    
+ }
+
+ @media (max-width: 440px){
+
 
     .header-contacts{
         text-align: left;
@@ -86,7 +74,6 @@
     }
 
     .map{
-        margin-top: 20px;
         width: 100%;
     }
 

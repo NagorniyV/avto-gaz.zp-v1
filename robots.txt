@@ -1,16 +1,18 @@
 User-agent: *
 Allow: /
 
-# Запрещаем доступ к служебным папкам
-Disallow: /src/
-Disallow: /admin/
-Disallow: /cgi-bin/
-Disallow: /includes/
-Disallow: /tmp/
-Disallow: /private/
+# ===== ЗАПРЕТ СЛУЖЕБНЫХ ПАПОК =====
+Disallow: /src/        # Исходные файлы (кроме изображений)
+Disallow: /admin/      # Админ-панель
+Disallow: /cgi-bin/    # CGI скрипты
+Disallow: /includes/   # Включаемые файлы
+Disallow: /tmp/        # Временные файлы
+Disallow: /private/    # Приватные данные
+Disallow: /node_modules/
+Disallow: /backup/
 
-# Разрешаем индексацию изображений (для поиска по картинкам)
-Allow: /src/img/
+# ===== РАЗРЕШЕНИЯ ДЛЯ ПОИСКА =====
+Allow: /src/img/       # Разрешить индексацию изображений для Google Images
 
-# Указываем путь к карте сайта
+# ===== ССЫЛКА НА КАРТУ САЙТА =====
 Sitemap: https://alex-gaz.com.ua/sitemap.xml

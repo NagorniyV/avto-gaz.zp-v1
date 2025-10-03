@@ -1,3 +1,11 @@
+.brend {
+    position: relative;
+    background-image: url(../img/backgraund.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .brend-title{
     max-width: 1100px;
     text-align: center;
@@ -23,7 +31,6 @@
 
 .brends-container>div {
     flex: 0 0 calc(25% - 16px);
-    /* Фиксированная ширина для 4 элементов */
     height: 160px;
     background-color: #fff;
     border-radius: 12px;
@@ -33,7 +40,6 @@
     position: relative;
     filter: grayscale(100%);
     box-sizing: border-box;
-    /* Добавь это! */
 }
 
 .brends-container>div:hover {
@@ -47,7 +53,6 @@
     max-height: 100%;
     margin: 0 auto;
     display: block;
-    /* Добавь для центрирования */
 }
 
   .seo-content{

@@ -4,7 +4,7 @@
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id={G-ВАШ_ID}"
+      src="https://www.googletagmanager.com/gtag/js?id=G-DTR426WGKE"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,21 +12,25 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "{G-ВАШ_ID}");
+      gtag("config", "G-DTR426WGKE");
     </script>
+    <meta
+      name="google-site-verification"
+      content="UkxJ_vNjVSYs9ehG4t1pPEJTl5TdPn7BSXRizlKcc0A"
+    />
 
     <!-- Кодировка и масштабирование -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="icon" href="{ПУТЬ_К_FAVICON}" type="image/{png/ico/svg}" />
+    <link rel="icon" href="./src/img/favicon.png" type="image/x-icon" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family={ШРИФТ_1}:ital,wght@0,100..900;1,100..900&family={ШРИФТ_2}:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -47,75 +51,137 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{ЗАГОЛОВОК ДЛЯ СОЦСЕТЕЙ}" />
-    <meta property="og:description" content="{ОПИСАНИЕ ДЛЯ СОЦСЕТЕЙ}" />
-    <meta property="og:image" content="{ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_ДЛЯ_ПРЕВЬЮ}" />
-    <meta property="og:url" content="{https://ВАШ-САЙТ.ua/}" />
-    <meta property="og:site_name" content="{НАЗВАНИЕ_ВАШЕГО_САЙТА}" />
+    <meta
+      property="og:title"
+      content="Наші роботи з встановлення ГБО 📸 | СТО АЛЕКС-ГАЗ Буча"
+    />
+    <meta
+      property="og:description"
+      content="Галерея виконаних робіт з встановлення ГБО. Реальні фото монтажу газового обладнання на різні авто."
+    />
+    <meta
+      property="og:image"
+      content="https://alex-gaz.com.ua/src/img/Open-Graph.webp"
+    />
+    <meta property="og:url" content="https://alex-gaz.com.ua/works.html" />
+    <meta property="og:site_name" content="СТО АЛЕКС-ГАЗ" />
+    <meta property="og:locale" content="uk_UA" />
 
     <!-- Scripts -->
     <script src="./src/js/main.js" defer></script>
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Автор и копирайт -->
+    <meta name="author" content="СТО АЛЕКС-ГАЗ" />
+    <meta name="copyright" content="СТО АЛЕКС-ГАЗ" />
+
+    <!-- Индексация -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Мобильная оптимизация -->
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- Тема браузера -->
+    <meta name="theme-color" content="#1a5fb4" />
+
+    <!-- Schema.org для галереи работ -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "{AutoRepair | LocalBusiness | Organization}",
-        "name": "{НАЗВАНИЕ_ВАШЕГО_БИЗНЕСА}",
-        "alternateName": "{АЛЬТЕРНАТИВНОЕ_НАЗВАНИЕ}",
-        "image": "{ССЫЛКА_НА_ЛОГОТИП}",
-        "url": "{https://ВАШ-САЙТ.ua}",
-        "description": "{ОПИСАНИЕ_БИЗНЕСА}",
-        "telephone": "{+380XXXXXXXXX}",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "{УЛИЦА, ДОМ}",
-          "addressLocality": "{ГОРОД}",
-          "addressRegion": "{ОБЛАСТЬ}",
-          "postalCode": "{ИНДЕКС}",
-          "addressCountry": "{UA}"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "{ШИРОТА}",
-          "longitude": "{ДОЛГОТА}"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "{Monday}",
-            "{Tuesday}",
-            "{Wednesday}",
-            "{Thursday}",
-            "{Friday}",
-            "{Saturday}"
-          ],
-          "opens": "{08:00}",
-          "closes": "{18:00}"
-        },
-        "priceRange": "{$$}",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Услуги",
+        "@type": "CollectionPage",
+        "name": "Галерея наших робіт з встановлення ГБО",
+        "description": "Фотогалерея виконаних робіт з встановлення газобалонного обладнання на різні марки автомобілів",
+        "url": "https://alex-gaz.com.ua/works.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "numberOfItems": 8,
           "itemListElement": [
             {
-              "@type": "Offer",
-              "name": "{НАЗВАНИЕ_УСЛУГИ_1}",
-              "description": "{ОПИСАНИЕ_УСЛУГИ_1}"
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на FORD FUSION",
+                "description": "Професійний монтаж ГБО 4 покоління у Бучі",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/FORD FUSION/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
             },
             {
-              "@type": "Offer",
-              "name": "{НАЗВАНИЕ_УСЛУГИ_2}",
-              "description": "{ОПИСАНИЕ_УСЛУГИ_2}"
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на Hyundai Tucson",
+                "description": "Встановлення газового обладнання в Бучі з гарантією",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/Hyundai Tucson3/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на JEEP CHEROKEE",
+                "description": "Якісний монтаж ГБО на позашляховик",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/JEEP CHEROKEE/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на DODGE JOURNEY",
+                "description": "Професійне встановлення ГБО 4 покоління",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/DODGE JOURNEY/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на NISSAN X-TRAIL",
+                "description": "Професійний монтаж ГБО 4 покоління з акуратним прокладанням комунікацій",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/NISSAN X-TRAIL/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на MITSUBISHI OUTLANDER",
+                "description": "Встановлення ГБО на MITSUBISHI OUTLANDER",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/MITSUBISHI OUTLANDER/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на Toyota Camry",
+                "description": "Акуратне встановлення ГБО на японський седан",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/Toyota Camry/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "ImageObject",
+                "name": "Встановлення ГБО на Тoyota Corolla",
+                "description": "Встановлення ГБО з налаштуванням економічного режиму",
+                "contentUrl": "https://alex-gaz.com.ua/src/img/alex-gaz/Тoyota Corolla/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp"
+              }
             }
           ]
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "{4.9}",
-          "reviewCount": "{47}",
-          "bestRating": "5",
-          "worstRating": "1"
+        "publisher": {
+          "@type": "AutoRepair",
+          "name": "СТО АЛЕКС-ГАЗ",
+          "url": "https://alex-gaz.com.ua"
         }
       }
     </script>

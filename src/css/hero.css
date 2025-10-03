@@ -1,10 +1,9 @@
 .hero {
     position: relative;
-    background-image: url(../img/GBO-img-hero-desktop.png);
+    background-image: url(../img/GBO-img-hero-desktop.webp);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* height: 100vh; */
 }
 
 .hero-title{
