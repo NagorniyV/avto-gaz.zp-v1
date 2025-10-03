@@ -1,3 +1,16 @@
 User-agent: *
 Allow: /
-Sitemap: https://kaskad.in.ua/sitemap.xml
+
+# Запрещаем доступ к служебным папкам
+Disallow: /src/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /private/
+
+# Разрешаем индексацию изображений (для поиска по картинкам)
+Allow: /src/img/
+
+# Указываем путь к карте сайта
+Sitemap: https://alex-gaz.com.ua/sitemap.xml
