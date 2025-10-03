@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="icon" href="{ПУТЬ_К_FAVICON}" type="image/{png/ico/svg}" />
+    <link rel="icon" href="./src/img/favicon_AG.ico" type="image/x-icon" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,82 +39,80 @@
     <meta name="description" content="✅ Встановлення ГБО у Бучі від СТО АЛЕКС-ГАЗ. Гарантія 12 міс. Кращі ціни на обладнання KME, Tomasetto. Безкоштовна консультація! вул. Депутатська, 3." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="{https://ВАШ-САЙТ.ua/}" />
+    <link rel="canonical" href="https://alex-gaz.com.ua/" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{ЗАГОЛОВОК ДЛЯ СОЦСЕТЕЙ}" />
-    <meta property="og:description" content="{ОПИСАНИЕ ДЛЯ СОЦСЕТЕЙ}" />
-    <meta property="og:image" content="{ССЫЛКА_НА_ИЗОБРАЖЕНИЕ_ДЛЯ_ПРЕВЬЮ}" />
-    <meta property="og:url" content="{https://ВАШ-САЙТ.ua/}" />
-    <meta property="og:site_name" content="{НАЗВАНИЕ_ВАШЕГО_САЙТА}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Встановлення ГБО у Бучі ᐈ СТО АЛЕКС-ГАЗ" />
+<meta property="og:description" content="Професійне встановлення та ремонт ГБО у Бучі. Гарантія 12 місяців. Италійське обладнання. Безкоштовна консультація." />
+<meta property="og:image" content="./src/img/alex-gaz/JEEP GRAND CHEROKEE/ЗАГАЛЬН ВИГЛЯД ПЕРЕД.webp" />
+<meta property="og:url" content="https://alex-gaz.com.ua/" />
+<meta property="og:site_name" content="СТО АЛЕКС-ГАЗ" />
 
     <!-- Scripts -->
     <script src="./src/js/main.js" defer></script>
 
     <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair", // Основной тип - автосервис
+  "name": "СТО АЛЕКС-ГАЗ",
+  "image": "https://alex-gaz.com.ua/images/logo.png", // Ссылка на ваш логотип
+  "url": "https://alex-gaz.com.ua",
+  "description": "Станція технічного обслуговування АЛЕКС-ГАЗ у Бучі. Спеціалізація - встановлення, налаштування та ремонт газобалонного обладнання (ГБО).",
+  "telephone": "+380508199757", // Обязательно в международном формате
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "вул. Депутатська, 3",
+    "addressLocality": "Буча",
+    "addressRegion": "Київська область",
+    "postalCode": "08292",
+    "addressCountry": "UA"
+  },
+"geo": {
+  "@type": "GeoCoordinates",
+  "latitude": "50.543853",
+  "longitude": "30.196402"
+}
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "08:30",
+    "closes": "18:00"
+  },
+  "priceRange": "$$", // Показывает, что у вас средний ценовой уровень
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Послуги з встановлення та обслуговування ГБО",
+    "itemListElement": [
       {
-        "@context": "https://schema.org",
-        "@type": "{AutoRepair | LocalBusiness | Organization}",
-        "name": "{НАЗВАНИЕ_ВАШЕГО_БИЗНЕСА}",
-        "alternateName": "{АЛЬТЕРНАТИВНОЕ_НАЗВАНИЕ}",
-        "image": "{ССЫЛКА_НА_ЛОГОТИП}",
-        "url": "{https://ВАШ-САЙТ.ua}",
-        "description": "{ОПИСАНИЕ_БИЗНЕСА}",
-        "telephone": "{+380XXXXXXXXX}",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "{УЛИЦА, ДОМ}",
-          "addressLocality": "{ГОРОД}",
-          "addressRegion": "{ОБЛАСТЬ}",
-          "postalCode": "{ИНДЕКС}",
-          "addressCountry": "{UA}"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "{ШИРОТА}",
-          "longitude": "{ДОЛГОТА}"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "{Monday}",
-            "{Tuesday}",
-            "{Wednesday}",
-            "{Thursday}",
-            "{Friday}",
-            "{Saturday}"
-          ],
-          "opens": "{08:00}",
-          "closes": "{18:00}"
-        },
-        "priceRange": "{$$}",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Услуги",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "name": "{НАЗВАНИЕ_УСЛУГИ_1}",
-              "description": "{ОПИСАНИЕ_УСЛУГИ_1}"
-            },
-            {
-              "@type": "Offer",
-              "name": "{НАЗВАНИЕ_УСЛУГИ_2}",
-              "description": "{ОПИСАНИЕ_УСЛУГИ_2}"
-            }
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "{4.9}",
-          "reviewCount": "{47}",
-          "bestRating": "5",
-          "worstRating": "1"
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Встановлення ГБО 4 покоління",
+          "description": "Повний цикл установки газобалонного обладнання 4-го покоління на автомобіль."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Діагностика та ремонт ГБО",
+          "description": "Комп'ютерна діагностика, пошук та усунення несправностей газової системи."
         }
       }
-    </script>
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5", // Если у вас есть отзывы, укажите средний балл
+    "reviewCount": "28", // И их количество
+    "bestRating": "5",
+    "worstRating": "5"
+  }
+}
+</script>
   </head>
   <body>
     <header class="header">
