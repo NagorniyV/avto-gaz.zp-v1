@@ -92,6 +92,10 @@
 }
 
 @media (max-width: 680px){
+.hero{
+        min-height: 100vh;
+}
+
     .hero-icon-container p{
         display: none;
     }

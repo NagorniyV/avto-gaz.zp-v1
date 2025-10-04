@@ -1,35 +1,68 @@
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    color: #f3f3f3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: #f3f3f3;
 }
 
-.header-line{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    /* margin-top: 12px; */
+
+
+/* Основной логотип (для мобильной версии) */
+.logo-div {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1002;
+  display: block;
 }
 
-.nav-list, .nav-link{
-    display: flex;
-    gap: 36px;
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  color: #f3f3f3;
+  text-decoration: none;
 }
 
-.phones-column, .phone-link{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.logo-div {
+  background: linear-gradient(90deg, #f81a37 0%, #8c0d1b 40%, #1a0000 70%, #000000 100%);
+  padding: 4px 12px;
+  border-radius: 14px;
+  border: 3px solid #f3f3f3;
+}
+
+/* Логотип в десктопной версии - скрываем */
+.header-line .logo-div {
+  display: none;
+}
+
+/* Десктопная навигация */
+.header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.nav-list,
+.nav-link {
+  display: flex;
+  gap: 36px;
+}
+
+.phones-column,
+.phone-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .nav-link {
   position: relative;
   text-decoration: none;
   padding-bottom: 5px;
+  color: #f3f3f3;
 }
 
 .nav-link::after {
@@ -55,21 +88,179 @@
   width: 100%;
 }
 
-.logo{
-  font-weight: 800;
-  font-size: 22px;
+/* Бургер меню для мобильной версии */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 1001;
 }
 
-.logo-div{
-  /* background: linear-gradient(to right, #f81a37 15%, #f81a37 30%, #1a0000 70%, #000000 100%); */
-  background: linear-gradient(90deg, #f81a37 0%, #8c0d1b 40%, #1a0000 70%, #000000 100%);
-  padding: 4px 12px;
-  border-radius: 14px;
-  border: 3px solid #f3f3f3
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #f81a37;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 870px){
-  .logo, .logo-div{
+/* Mobile header column */
+.mobile-header-colum {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  padding: 80px 20px 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(135deg, #dfd4db 0%, #e9e1e7 50%, #f3eef2 100%);
+}
+
+.mobile-header-colum.active {
+  transform: translateX(0);
+}
+
+.mobile-header-colum .nav-list-mobile {
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.mobile-header-colum .header-contacts {
+  margin-top: auto;
+}
+
+.mobile-header-colum {
+  color: #101010;
+}
+
+.mobile-header-colum .nav-link,
+.mobile-header-colum .phone-link-mobile {
+  font-size: 28px;
+  border: 2px solid #7c5b6d;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f5f0f4 0%, #e8dde5 50%, #dbc9d6 100%);
+  color: #101010;
+  text-align: center;
+}
+
+/* Медиа запросы для мобильной версии */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .header-line {
     display: none;
+  }
+
+  .mobile-header-colum {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-header-colum .header-contacts {
+    display: block !important;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .phones-column {
+    align-items: center;
+  }
+
+  /* Основной логотип виден в мобильной версии */
+  .logo-div {
+    display: block;
+  }
+}
+
+/* Медиа запросы для десктопной версии */
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .mobile-header-colum {
+    display: none !important;
+  }
+
+  .header-line {
+    display: flex;
+  }
+
+  /* В десктопной версии скрываем основной логотип и показываем логотип в header-line */
+  .logo-div {
+    display: none;
+  }
+
+  .header-line .logo-div {
+    display: block;
+    position: static;
+  }
+}
+
+/* Анимация для бургер-кнопки при активном состоянии */
+.burger-menu.active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+  .burger-menu {
+    top: 20px;
+    right: 15px;
+    width: 35px;
+    height: 25px;
+  }
+
+  .logo-div {
+    top: 15px;
+    left: 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo-div {
+    padding: 3px 10px;
+  }
+
+  .mobile-header-colum .nav-link,
+  .mobile-header-colum .phone-link-mobile {
+    font-size: 24px;
+    padding: 8px 30px;
+  }
+}
+
+/* Для средних экранов */
+@media (max-width: 870px) and (min-width: 769px) {
+  .nav-list {
+    gap: 20px;
+  }
+
+  .phones-column {
+    gap: 5px;
   }
 }
