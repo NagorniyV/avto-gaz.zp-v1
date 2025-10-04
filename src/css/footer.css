@@ -9,30 +9,25 @@
     color: #ff2340;
 }
 
-.footer {
-    position: relative;
-    width: 100%;
-    height: 500px;
+.footer>.container {
+display: flex;
+gap: 30px;
 }
 
 .footer iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    filter: grayscale(20%) brightness(95%);
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #0d253b;
 }
 
 .footer-card {
-    position: absolute;
-    top: 40px;
-    right: 40px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     padding: 30px;
-    width: 350px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px);
-    border-left: 5px solid #ff2340;
+    border-left: 5px solid #0d253b;
 }
 
 .footer-card h3 {
@@ -83,10 +78,6 @@
 }
 
 .footer-list a[href^="mailto:"] {
-    color: #ff2340;
-}
-
-.footer-list a[href^="mailto:"]:hover {
     color: #ff2340;
 }
 
