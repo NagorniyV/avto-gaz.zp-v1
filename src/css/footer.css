@@ -15,7 +15,8 @@ gap: 30px;
 }
 
 .footer iframe {
-    width: 50%;
+    margin-left: auto;
+    min-width: 65%;
     height: auto;
     border-radius: 10px;
     border: 2px solid #0d253b;
@@ -100,43 +101,17 @@ gap: 30px;
 }
 
 @media (max-width: 900px) {
-    .footer-card {
-        width: 300px;
-        right: 20px;
-        top: 20px;
-        padding: 20px;
-    }
+.footer>.container{
+    flex-direction: column-reverse;
+}
 
-    .footer {
-        height: 500px;
-    }
+.footer iframe{
+    width: auto;
+    margin: 0 auto;
+}
 }
 
 @media (max-width: 440px) {
-    .footer-card {
-        position: relative;
-        width: 100%;
-        right: 0;
-        top: 0;
-        border-radius: 0;
-        box-shadow: none;
-        border-left: none;
-        border-top: none;
-    }
-
-    .footer {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: 0px auto;
-    }
-
-    .footer iframe {
-        height: 350px;
-        border-radius: 20px;
-    }
-
     h1 {
         font-size: 28px;
     }
