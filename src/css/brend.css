@@ -62,7 +62,11 @@
     color: #f3f3f3;
   }
 
-.seo-content>div{
+   .seo-content p, .seo-content li{
+    text-indent: 20px;
+   }
+
+    .seo-content>div{
     background: rgba(255, 255, 255, 0.1);
     padding: 12px 12px;
     border-radius: 10px;
@@ -88,7 +92,7 @@
 @media (max-width: 740px){
     .brends-container{
         display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
