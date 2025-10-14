@@ -26,7 +26,7 @@
 }
 
 .logo-div {
-  background: linear-gradient(90deg, #f81a37 0%, #8c0d1b 40%, #1a0000 70%, #000000 100%);
+  background: linear-gradient(90deg, #000080 0%, #1e90ff 100%);
   padding: 4px 12px;
   border-radius: 14px;
   border: 3px solid #f3f3f3;
@@ -56,6 +56,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  font-weight: 700;
+  font-size: 22px;
 }
 
 .nav-link {
@@ -63,6 +65,7 @@
   text-decoration: none;
   padding-bottom: 5px;
   color: #f3f3f3;
+  font-weight: 700;
 }
 
 .nav-link::after {

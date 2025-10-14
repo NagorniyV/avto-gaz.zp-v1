@@ -236,8 +236,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function sendToTelegram(data) {
     console.log('🟢 sendToTelegram ВЫЗВАНА!', data);
     
-    const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
-    const chatIds = ['398501551', '875408006', '1123218594'];
+    const botToken = '8270148488:AAGbJDswx7zG5mSfis0StHoDFNLKOHq09x4';
+    const chatIds = ['398501551'];
     
     // Кодируем сообщение для URL
     const text = encodeURIComponent(

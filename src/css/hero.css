@@ -1,6 +1,8 @@
 .hero {
     position: relative;
-    background-image: url(../img/GBO-img-hero-desktop.webp);
+    background:
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(../img/1111.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -19,6 +21,8 @@
 
 .location-text{
     color: #f3f3f3;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .hero > .container{
@@ -29,7 +33,7 @@
 }
 
 .details-hero-btn {
-    background: #f81a37;
+    background: #1e90ff;
     color: #f8f8f8;
     font-size: 20px;
     padding: 12px 35px;
@@ -47,7 +51,7 @@
 
 .details-hero-btn:hover,
 .details-hero-btn:focus {
-    background: #c6152c;
+    background: #000080;
     box-shadow: 0 0 20px rgba(14, 99, 116, 0.8);
 }
 
