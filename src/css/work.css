@@ -28,7 +28,6 @@
    margin: 22px auto;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   /* text-align: center; */
 }
 
 .ustanovka-gbo>li{
@@ -211,7 +210,6 @@
                 transparent);
     }
 }
-
 
 @media (max-width: 1100px){
     .hero-icon-container{
