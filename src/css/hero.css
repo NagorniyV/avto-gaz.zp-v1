@@ -25,7 +25,9 @@
     font-size: 20px;
 }
 
-.hero > .container{
+.hero > .container,
+.work-hero >.container,
+.price-hero >.container{
     display: flex;
     flex-direction: column;
     gap: 40px;

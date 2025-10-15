@@ -237,7 +237,7 @@ function sendToTelegram(data) {
     console.log('🟢 sendToTelegram ВЫЗВАНА!', data);
     
     const botToken = '8270148488:AAGbJDswx7zG5mSfis0StHoDFNLKOHq09x4';
-    const chatIds = ['398501551'];
+    const chatIds = ['398501551', '477034599'];
     
     // Кодируем сообщение для URL
     const text = encodeURIComponent(
@@ -287,33 +287,4 @@ function sendToTelegram(data) {
     });
     
     console.log('🟢 sendToTelegram ЗАВЕРШЕНА');
-}
-
-// АЛЬТЕРНАТИВНАЯ ФУНКЦИЯ ЕСЛИ ОСНОВНАЯ НЕ РАБОТАЕТ
-function sendToTelegramAlternative(data) {
-    console.log('🟢 Альтернативная отправка в Telegram');
-    
-    const botToken = '8370472423:AAFbn4BXuexXC5wk-GP5G3mpsQg02LWZpZY';
-    const chatIds = ['398501551', '484881476'];
-    
-    const text = `📞 Нова заявка з сайту!%0A%0A👤 Ім'я: ${data.name || 'Не вказано'}%0A📱 Телефон: ${data.phone}%0A🚗 Авто: ${data.carModel || 'Не вказано'}%0A⏰ Час: ${data.timestamp}`;
-    
-    chatIds.forEach(chatId => {
-        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`;
-        
-        // Способ 1: через Image (работает всегда)
-        const img = new Image();
-        img.src = url;
-        console.log('🟡 Отправка через Image для', chatId, ':', url);
-        
-        // Способ 2: через XMLHttpRequest
-        try {
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
-            xhr.send();
-            console.log('🟡 Отправка через XMLHttpRequest для', chatId);
-        } catch (error) {
-            console.error('❌ Ошибка XMLHttpRequest:', error);
-        }
-    });
 }

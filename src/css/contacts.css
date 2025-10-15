@@ -1,6 +1,8 @@
 .contacts-section{
     position: relative;
-    background-image: url(../img/GAZ-NA-AVTO-BG.webp);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../img/avto-gaz-zp-contacts.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
