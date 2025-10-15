@@ -1,9 +1,5 @@
 .brend {
-    position: relative;
-    background-image: url(../img/backgraund.webp);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: linear-gradient(90deg, #000000 0%, #000080 50%, #1e90ff 100%);
 }
 
 .brend-title{
