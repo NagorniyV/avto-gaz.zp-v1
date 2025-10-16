@@ -108,7 +108,7 @@
 .burger-line {
   width: 100%;
   height: 3px;
-  background-color: #f81a37;
+  background-color: #000080;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -126,7 +126,7 @@
   padding: 80px 20px 20px;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-  background: linear-gradient(135deg, #dfd4db 0%, #e9e1e7 50%, #f3eef2 100%);
+  background: linear-gradient(90deg, #000080 0%, #1e90ff 100%);
 }
 
 .mobile-header-colum.active {
@@ -150,10 +150,10 @@
 .mobile-header-colum .nav-link,
 .mobile-header-colum .phone-link-mobile {
   font-size: 28px;
-  border: 2px solid #7c5b6d;
+  border: 2px solid #1e90ff;
   padding: 10px 40px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #f5f0f4 0%, #e8dde5 50%, #dbc9d6 100%);
+  background: linear-gradient(135deg, #f7fbff 0%, #ebf5ff 50%, #deeeff 100%);
   color: #101010;
   text-align: center;
 }

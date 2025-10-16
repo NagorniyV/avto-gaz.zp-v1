@@ -19,7 +19,7 @@
     background: #101010;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(248, 26, 55, 0.3);
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.2);
 }
 
 .modal-img {
@@ -110,11 +110,11 @@
 
 .form-group input:focus {
     outline: none;
-    border-color: #f81a37;
+    border-color: #1e90ff;
 }
 
 .modal-submit-btn {
-    background: #f81a37;
+    background: #1e90ff;
     color: #f8f8f8;
     padding: 15px 30px;
     border-radius: 25px;
@@ -128,7 +128,7 @@
 }
 
 .modal-submit-btn:hover {
-    background: #c6152c;
+    background: #000080;
     transform: scale(1.02);
 }
 
