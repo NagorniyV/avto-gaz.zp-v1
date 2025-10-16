@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# ===== ЗАПРЕТ СЛУЖЕБНЫХ ПАПОК =====
+# ===== ЗАПРЕТ СЛЕЖЕБНЫХ ПАПОК =====
 Disallow: /src/        # Исходные файлы (кроме изображений)
 Disallow: /admin/      # Админ-панель
 Disallow: /cgi-bin/    # CGI скрипты
@@ -10,9 +11,12 @@ Disallow: /tmp/        # Временные файлы
 Disallow: /private/    # Приватные данные
 Disallow: /node_modules/
 Disallow: /backup/
+Disallow: /.htaccess
+Disallow: /.env
+Disallow: /package.json
 
 # ===== РАЗРЕШЕНИЯ ДЛЯ ПОИСКА =====
 Allow: /src/img/       # Разрешить индексацию изображений для Google Images
 
 # ===== ССЫЛКА НА КАРТУ САЙТА =====
-Sitemap: https://alex-gaz.com.ua/sitemap.xml
+Sitemap: https://alex-gaz.zp.ua/sitemap.xml
