@@ -45,7 +45,7 @@
 
 /* Базовые стили для всех SVG */
 .social-btn svg {
-    color: #ffffff;
+    color: #1e90ff;
     /* Устанавливаем цвет через currentColor */
     fill: currentColor;
     /* Для иконок с fill */
@@ -64,7 +64,7 @@
 .social-btn:focus svg {
     transform: scale(1.2);
     filter: drop-shadow(0 0 8px rgba(30, 144, 255, 0.15));
-    color: #1e90ff;
+    color: #000080;
     /* Меняем currentColor на синий */
     fill: currentColor;
     /* Наследуем цвет */
