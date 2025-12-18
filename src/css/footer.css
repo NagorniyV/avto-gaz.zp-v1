@@ -29,7 +29,6 @@
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    /* Добавлено для полной ширины */
 }
 
 .contacts-map img {
@@ -64,9 +63,10 @@
 }
 
 .footer-card>p {
-    color: #7f8c8d;
+    color: #121212;
     margin-bottom: 20px;
-    font-style: italic;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .footer-list {
@@ -86,11 +86,12 @@
 }
 
 .footer-list a {
-    color: #2c3e50;
+    color: #121212;
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-block;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .footer-list a[href^="tel:"] {
@@ -99,8 +100,9 @@
 }
 
 .footer-list p {
-    color: #34495e;
-    line-height: 1.5;
+    color: #121212;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .icon {
@@ -123,19 +125,14 @@
 
     .footer-card {
         max-width: none;
-        /* Убираем ограничение ширины */
-        /* width: 100%; */
-        /* Занимает всю доступную ширину */
     }
 
     .contacts-map>div {
         width: 100%;
-        /* Гарантируем полную ширину */
     }
 
     .footer iframe {
         width: 100%;
-        /* iframe занимает всю ширину контейнера */
         margin: 0 auto;
     }
 }

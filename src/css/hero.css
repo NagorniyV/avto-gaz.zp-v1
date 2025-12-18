@@ -2,7 +2,7 @@
     position: relative;
     background:
             linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url(../img/1111.jpg);
+            url(../img/avto-gaz-zp-hero.webp);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -35,9 +35,10 @@
 }
 
 .details-hero-btn {
-    background: #1e90ff;
+    background: #000080;
     color: #f8f8f8;
     font-size: 20px;
+    font-weight: 700;
     padding: 12px 35px;
     border-radius: 25px;
     margin-top: 16px;

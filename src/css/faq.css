@@ -74,6 +74,7 @@
      padding: 0 0 20px 0;
      line-height: 1.6;
      opacity: 0.9;
+     color: #121212;
  }
 
  .faq-item.active .faq-answer {
