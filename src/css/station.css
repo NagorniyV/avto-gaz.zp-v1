@@ -1,7 +1,6 @@
 .station-title{
     font-size: 42px;
     text-align: center;
-
 }
 
 .station-title > span{
@@ -67,29 +66,86 @@
 }
 
 .our-servise {
-    display: flex;
-    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    /* Важно для очистки float */
+    margin: 30px auto;
     width: 100%;
-    align-items: center;
 }
 
-.our-servise>div {
-    flex: 1;
-    min-height: 100px;
+/* Картинка с float */
+.our-servise-hodovaya-img {
+    float: right;
+    width: 40%;
+    max-width: 500px;
+    margin: 0 0 20px 30px;
+    /* top right bottom left */
+    border-radius: 10px;
+    overflow: hidden;
+    shape-outside: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    shape-margin: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.our-servise-list li{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.our-servise-hodovaya-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
 }
 
-.our-servise-list{
-    margin: auto 0px auto;
+.our-servise-hodovaya-img img:hover {
+    transform: scale(1.03);
 }
 
-.our-servise-list li p {
+/* Текстовый контент */
+.our-servise-content {
+    overflow: hidden;
+    /* Очистка float */
+}
+
+/* Первые несколько элементов обтекают картинку */
+.our-servise-content .station-content,
+.our-servise-content p:first-of-type,
+.our-servise-content p:nth-of-type(2) {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* Блоки, которые должны идти ПОД картинкой */
+.our-servise-content h3:first-of-type,
+.problems-grid,
+.our-servise-content h3:nth-of-type(2),
+.parts-grid,
+.seo-conclusion {
+    clear: both;
+    /* Ключевое свойство - очищает float */
+    margin-top: 30px;
+}
+
+.our-servise-content-div p {
+    margin: 8px 0px;
+    text-indent: 20px;
+}
+
+.station h3 {
+    font-size: 20px;
+}
+
+.station h4 {
     font-size: 18px;
+}
+
+.station-content {
+    text-indent: 30px;
+    margin-bottom: 8px;
+}
+
+.seo-text-block>p {
+    text-indent: 30px;
+    margin-bottom: 12px;
 }
 
 /* Адаптивність */
@@ -125,6 +181,5 @@
     .station-title{
     font-size: 36px;
     text-align: center;
-
 }
 }
